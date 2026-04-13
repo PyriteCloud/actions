@@ -1,0 +1,16 @@
+name: setup-pyrite-cli
+
+on:
+    workflow_dispatch:
+
+jobs:
+    redeploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Setup Pyrite CLI
+              uses: ./setup-pyrite-cli
+              with:
+                  version: latest
